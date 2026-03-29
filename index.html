@@ -2,22 +2,26 @@
 <html>
 <head>
     <title>5in FPV Drone Building Guide</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Load Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="favicon.png"> 
+
+    <!-- Viewport for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         /* Body styling */
         body {
-    background-color: black;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    max-width: 900px;
-    margin: 0 auto;   /* centers the page */
-    padding: 20px;
-    line-height: 1.6;
-}
+            background-color: black;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            max-width: 1200px;   /* wider layout */
+            margin: 0 auto;       /* center page */
+            padding: 20px;
+            line-height: 1.6;
+            font-size: 18px;
+        }
 
         /* Headings */
         h1, h2, h3 {
@@ -29,9 +33,17 @@
             color: #00bfff;
             text-decoration: none;
         }
-
         a:hover {
             text-decoration: underline;
+        }
+
+        /* Make all images uniform and responsive */
+        img {
+            width: 100%;           /* fill available width */
+            max-width: 700px;      /* max width */
+            height: auto;          /* keeps aspect ratio */
+            display: block;
+            margin: 20px 0;        /* spacing between sections */
         }
     </style>
 </head>
@@ -43,15 +55,12 @@
     <h3>This page is all about my drone building process — including troubleshooting!</h3>
 
     <h2>Tools You Need</h2>
-
     <p>
         First, let's talk about the extra tools you’ll need. One of the most important things is a soldering iron and some solder. You can get a decent one for around $30–$50 (not including solder).
     </p>
-
     <p>
         I personally use the Pinecil soldering iron, which I found very helpful. It costs about $40 and is easy to use. I highly recommend it if you're just starting out with building drones.
     </p>
-
     <p>
         You also need a few basic tools like an allen key, a wrench, and a screwdriver. Zipties are very useful for organizing cables and securing components, and wire cutters are essential too.
     </p>
@@ -61,7 +70,7 @@
         I chose the <a href="https://www.aliexpress.us/item/3256808312462574.html" target="_blank" rel="noopener noreferrer">Phistal Mark5 Frame</a>.
         It’s a 5-inch frame with nice 3D-printed mounts for the GPS, antenna, and buzzer. It’s a very decent frame, but I made the mistake of getting the DeadCat version. Since I’m used to it, it was okay, but if you’re starting out, I would recommend the normal X-frame.
     </p>
-    <img src="DRONE%20WEBSITE/FRAME.png" alt="Phistal Mark5 Frame" width="400">
+    <img src="DRONE%20WEBSITE/FRAME.png" alt="Phistal Mark5 Frame">
 
     <h2>Motors</h2>
     <p>
@@ -74,7 +83,7 @@
     <p>
         When buying, choose the 2400KV version for 5-inch drones, as the 1700KV version is more suitable for 6-inch drones.
     </p>
-    <img src="DRONE%20WEBSITE/MOTORS.png" alt="EMAX ECO II 2207 Motors" width="400">
+    <img src="DRONE%20WEBSITE/MOTORS.png" alt="EMAX ECO II 2207 Motors">
 
     <h2>ESC and Flight Controller Stack</h2>
     <p>
@@ -83,11 +92,11 @@
     <p>
         For my build, I went with the <a href="https://www.amazon.com/Stack-Bmi270-30X30-Flight-Controller/dp/B0F32M77N1" target="_blank" rel="noopener noreferrer">Speedy Bee F405 Stack</a>. It’s a 4-in-1 ESC and flight controller stack that's reliable for many people while remaining very affordable.
     </p>
-    <img src="DRONE%20WEBSITE/STACK.png" alt="Speedy Bee F405 Stack" width="400">
+    <img src="DRONE%20WEBSITE/STACK.png" alt="Speedy Bee F405 Stack">
     <p>
         The motors are wired to the ESC with three wires going to three corresponding pads. The XT60 connector's black wire goes to the negative terminal and the red wire goes to the positive terminal.
     </p>
-    <img src="DRONE%20WEBSITE/ESC-WIRING-DIAGRAM.png" alt="ESC Wiring Diagram" width="400">
+    <img src="DRONE%20WEBSITE/ESC-WIRING-DIAGRAM.png" alt="ESC Wiring Diagram">
     <p>
         The flight controller and ESC are connected via an 8-pin connector.
     </p>
@@ -100,16 +109,16 @@
         The camera has three wires: VCC (red), GND (black), and CAM (yellow or white). These go to their respective pads with no changes required.
     </p>
     <p>
-        I used the <a href="https://www.aliexpress.us/item/3256808465896098.html?dp=gx-us-aliexpress-aliexpress-cos&aff_fcid=4200b693904e497e9763a36ff11e14a7-1774725427028-07164-_opUj24W&tt=CPS_NORMAL&aff_fsk=_opUj24W&aff_platform=portals-tool&sk=_opUj24W&aff_trace_key=4200b693904e497e9763a36ff11e14a7-1774725427028-07164-_opUj24W&terminal_id=45ac3caba1484762a5b353e87f230eec" target="_blank" rel="noopener noreferrer">Caddx Ant Camera</a> and the <a href="https://www.getfpv.com/tbs-unify-pro-5g8-v3-sma.html" target="_blank" rel="noopener noreferrer">TBS Unify Pro VTX</a>.
+        I used the <a href="https://www.aliexpress.us/item/3256808465896098.html" target="_blank" rel="noopener noreferrer">Caddx Ant Camera</a> and the <a href="https://www.getfpv.com/tbs-unify-pro-5g8-v3-sma.html" target="_blank" rel="noopener noreferrer">TBS Unify Pro VTX</a>.
     </p>
-    <img src="DRONE%20WEBSITE/VTX.png" alt="TBS Unify Pro VTX" width="400">
-    <img src="DRONE%20WEBSITE/CAMERA.png" alt="Caddx Ant Camera" width="400">
+    <img src="DRONE%20WEBSITE/VTX.png" alt="TBS Unify Pro VTX">
+    <img src="DRONE%20WEBSITE/CAMERA.png" alt="Caddx Ant Camera">
 
     <h2>ELRS Receiver and Antenna</h2>
     <p>
         For the receiver, I went with the <a href="https://www.getfpv.com/betafpv-elrs-2-4ghz-nano-receiver.html" target="_blank" rel="noopener noreferrer">BetaFlight ELRS Receiver</a>. It’s a very affordable receiver. The receiver has 4 wires: VCC red, GND black, TX yellow, and RX white. The wiring diagram follows the same logic as the VTX — TX to RX and vice versa, and VCC and GND to the respective pads.
     </p>
-    <img src="DRONE%20WEBSITE/RECEIVER.png" alt="BetaFlight ELRS Receiver" width="400">
+    <img src="DRONE%20WEBSITE/RECEIVER.png" alt="BetaFlight ELRS Receiver">
     <p>
         The VTX antenna is fairly simple except for one thing: the VTX antenna has to be the same polarization as your goggles' antenna. If you have a RHCP (right-hand circular polarization) antenna on your goggles, you need a RHCP antenna on your VTX. If you have a LHCP (left-hand circular polarization) antenna on your goggles, you need a LHCP antenna on your VTX. If you mix and match, you will experience significant signal loss and poor video quality. Also, the connector type of the antenna must match the connector type of the VTX. The most common connector types are SMA and RP-SMA, so make sure to check which one your VTX uses before purchasing an antenna. 
     </p>
@@ -117,7 +126,7 @@
     <p>
         This is the one I chose for my build, but I made a mistake and had to get an adapter.
     </p>
-    <img src="DRONE%20WEBSITE/VTX-ANTENNA.png" alt="VTX Antenna" width="400">
+    <img src="DRONE%20WEBSITE/VTX-ANTENNA.png" alt="VTX Antenna">
 
     <h2>GPS</h2>
     <p>
@@ -125,7 +134,7 @@
         The GPS module should be mounted in a location that has a clear view of the sky to ensure good satellite reception. Common mounting locations include the top of the drone or on a dedicated GPS mast. Keep in mind that adding a GPS module will increase the weight of your drone, which may affect its flight performance, so it's important to consider this when designing your build.
         The GPS module that I used is the <a href="https://www.getfpv.com/hglrc-m100-pro-gps-module.html" target="_blank" rel="noopener noreferrer">HGLRC M100 Pro GPS Module</a>.
     </p>
-    <img src="DRONE%20WEBSITE/GPS.jpeg" alt="HGLRC M100 Pro GPS Module" width="400">
+    <img src="DRONE%20WEBSITE/GPS.jpeg" alt="HGLRC M100 Pro GPS Module">
 
 </body>
 </html>
