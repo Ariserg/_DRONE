@@ -45,6 +45,19 @@
             display: block;
             margin: 20px 0;        /* spacing between sections */
         }
+        .section-box {
+    background-color: #1a1a1a;    /* slightly lighter black */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    border-left: 5px solid #4530bf;  /* accent color on the side */
+}
+
+/* Headings inside boxes */
+.section-box h2 {
+    color: #4530bf;
+}
     </style>
 </head>
 
@@ -64,14 +77,15 @@
     <p>
         You also need a few basic tools like an allen key, a wrench, and a screwdriver. Zipties are very useful for organizing cables and securing components, and wire cutters are essential too.
     </p>
-
+    <div class="section-box">
     <h2>Frame</h2>
     <p>
         I chose the <a href="https://www.aliexpress.us/item/3256808312462574.html" target="_blank" rel="noopener noreferrer">Phistal Mark5 Frame</a>.
         It’s a 5-inch frame with nice 3D-printed mounts for the GPS, antenna, and buzzer. It’s a very decent frame, but I made the mistake of getting the DeadCat version. Since I’m used to it, it was okay, but if you’re starting out, I would recommend the normal X-frame.
     </p>
     <img src="DRONE%20WEBSITE/FRAME.png" alt="Phistal Mark5 Frame">
-
+    </div>
+    <div class="section-box">
     <h2>Motors</h2>
     <p>
         For motors, I went with the <a href="https://www.amazon.com/EMAX-ECOII-2306-Brushless-Quadcopter-ECOII-2207/dp/B08P3BZYRB" target="_blank" rel="noopener noreferrer">EMAX ECO II 2207</a> motors.
@@ -84,7 +98,8 @@
         When buying, choose the 2400KV version for 5-inch drones, as the 1700KV version is more suitable for 6-inch drones.
     </p>
     <img src="DRONE%20WEBSITE/MOTORS.png" alt="EMAX ECO II 2207 Motors">
-
+    </div>
+    <div class="section-box">
     <h2>ESC and Flight Controller Stack</h2>
     <p>
         This part can be hit or miss depending on your experience and the quality of the components you choose. Instead of going in blindly, I recommend doing your research and choosing components that fit your budget and skill level. Watching a Joshua Bardwell video is very helpful.
@@ -100,7 +115,8 @@
     <p>
         The flight controller and ESC are connected via an 8-pin connector.
     </p>
-
+    </div>
+    <div class="section-box">
     <h2>Camera and VTX</h2>
     <p>
         The camera and VTX are not too complicated to install. The VTX usually has four wires: VTX, VCC, GND, and TX, which go to their respective pads. The exception is TX — it goes to the RX pad. Think of it like this: the TX pad is transmitting information, and the RX pad is receiving it. You can’t connect two receiving pads together, or else no information will be exchanged.
@@ -113,7 +129,8 @@
     </p>
     <img src="DRONE%20WEBSITE/VTX.png" alt="TBS Unify Pro VTX">
     <img src="DRONE%20WEBSITE/CAMERA.png" alt="Caddx Ant Camera">
-
+    </div>
+    <div class="section-box">
     <h2>ELRS Receiver and Antenna</h2>
     <p>
         For the receiver, I went with the <a href="https://www.getfpv.com/betafpv-elrs-2-4ghz-nano-receiver.html" target="_blank" rel="noopener noreferrer">BetaFlight ELRS Receiver</a>. It’s a very affordable receiver. The receiver has 4 wires: VCC red, GND black, TX yellow, and RX white. The wiring diagram follows the same logic as the VTX — TX to RX and vice versa, and VCC and GND to the respective pads.
@@ -127,7 +144,8 @@
         This is the one I chose for my build, but I made a mistake and had to get an adapter.
     </p>
     <img src="DRONE%20WEBSITE/VTX-ANTENNA.png" alt="VTX Antenna">
-
+    </div>
+    <div class="section-box">
     <h2>GPS</h2>
     <p>
         The GPS is not a necessary component for a 5-inch FPV drone, but it can be useful for certain features like return-to-home and position hold. If you choose to include a GPS module in your build, make sure to select one that is compatible with your flight controller and has good reviews from other users. The GPS module typically connects to the flight controller via a dedicated port or through the UART interface, so be sure to follow the wiring instructions provided by the manufacturer.
@@ -135,6 +153,7 @@
         The GPS module that I used is the <a href="https://www.getfpv.com/hglrc-m100-pro-gps-module.html" target="_blank" rel="noopener noreferrer">HGLRC M100 Pro GPS Module</a>.
     </p>
     <img src="DRONE%20WEBSITE/GPS.jpeg" alt="HGLRC M100 Pro GPS Module">
+    </div>
 
 </body>
 </html>
